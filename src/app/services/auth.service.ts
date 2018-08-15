@@ -21,14 +21,12 @@ export class AuthService {
         return this.app.loginPopup(this.applicationConfig.graphScopes)
             .then(idToken => {
                 const user = this.app.getUser();
-                debugger
                 if (user) {
                     return user;
                 } else {
                     return null;
                 }
             }, () => {
-                debugger
                 return null;
             });
     }

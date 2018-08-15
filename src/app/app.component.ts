@@ -25,11 +25,9 @@ export class AppComponent {
                 if (user) {
                     this.user = user;
                 } else {
-                    debugger
                     this.loginFailed = true;
                 }
             }, () => {
-                debugger
                 this.loginFailed = true;
             });
     }

@@ -36,11 +36,9 @@ export class NavbarComponent implements OnInit {
                 this.user = user;
                 this.LoggedIn = this.authService.isLoggedIn
             } else {
-
                 this.loginFailed = true;
             }
         }, () => {
-
             this.loginFailed = true;
         });
 }
