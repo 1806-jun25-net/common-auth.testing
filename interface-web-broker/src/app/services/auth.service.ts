@@ -9,6 +9,7 @@ export class AuthService {
         clientID: 'c5cbec24-2287-4c8f-9789-d31faa5f5d77',
         graphScopes: ['user.read'],
         authority: 'https://login.microsoftonline.com/project3auth.onmicrosoft.com'
+        extraQueryParameter: 'domain_hint=project3auth.onmicrosoft.com'
     };
     private app: any;
 
@@ -18,7 +19,7 @@ export class AuthService {
         });
     }
     public login() {
-        return this.app.loginPopup(this.applicationConfig.graphScopes)
+        return this.app.loginPopup(this.applicationConfig.graphScopes,  this.applicationConfig.extraQueryParameter)
             .then(idToken => {
                 const user = this.app.getUser();
                 debugger
