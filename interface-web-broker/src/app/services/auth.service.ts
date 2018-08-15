@@ -18,8 +18,8 @@ export class AuthService {
             // callback for login redirect
         });
     }
-    get isLoggedIn() {
-        const check = this.app.getUser();
+    get isLoggedIn(){
+        const check : boolean = this.app.getUser();
         if (check) {
             return true;
         }

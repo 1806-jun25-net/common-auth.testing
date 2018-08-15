@@ -15,7 +15,7 @@
     <a routerLink="forecast">Forecast</a>
   </mat-grid-tile>
   <mat-grid-tile>
-    <button (click)="login()" *ngIf="!user" mat-button>Login</button>
-    <button (click)="logout()" *ngIf="user" mat-button>Logout</button>
+    <button (click)="login()" *ngIf="!LoggedIn" mat-button>Login</button>
+    <button (click)="logout()" *ngIf="LoggedIn" mat-button>Logout</button>
   </mat-grid-tile>
 </mat-grid-list>

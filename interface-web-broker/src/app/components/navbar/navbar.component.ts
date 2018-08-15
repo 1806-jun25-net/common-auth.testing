@@ -12,6 +12,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class NavbarComponent implements OnInit {
   public user: Msal.User = null;
+  public LoggedIn = this.authService.isLoggedIn
   public userInfo: any = null;
   public apiCallFailed: boolean;
   public loginFailed: boolean;
@@ -33,12 +34,13 @@ export class NavbarComponent implements OnInit {
         .then(user => {
             if (user) {
                 this.user = user;
+                this.LoggedIn = this.authService.isLoggedIn
             } else {
-                debugger
+
                 this.loginFailed = true;
             }
         }, () => {
-            debugger
+
             this.loginFailed = true;
         });
 }
