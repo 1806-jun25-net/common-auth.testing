@@ -1,0 +1,14 @@
+# STAGE - BUILD
+FROM node:carbon as build
+RUN npm install -g @angular/cli@6.0.7
+WORKDIR /docker
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . ./
+RUN npm run build
+
+# STAGE - DEPLOY
+FROM nginx:1.14 as deploy
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=build /docker/dist/interface-web /usr/share/nginx/html
+COPY nginx-custom.conf /etc/nginx/conf.d/default.conf

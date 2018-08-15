@@ -1,0 +1,26 @@
+# interface-web://dockerignore
+# licensed under the terms of the [MIT License](https://github.com/revaturecloud/interface-web/blob/master/LICENSE).
+
+# DIRECTORY - ROOT
+# exclude - filepath
+.vagrant
+.vscode
+dist
+node_modules
+tmp
+
+# exclude - filename
+.dockerignore
+.gitignore
+CHANGELOG*
+CONTRIBUTING*
+docker*
+LICENSE*
+README*
+ubuntu*
+vagrant*
+
+app/**/*.js
+app/**/*.js.map
+e2e/*.js
+e2e/*.map

@@ -1,0 +1,56 @@
+/* mat-toolbar a:link {
+    color: #9b9c9d;
+    text-decoration: none;
+}
+
+mat-toolbar a:visited {
+    color: #9b9c9d;
+    text-decoration: none;
+
+}
+
+mat-toolbar a:hover {
+    text-decoration: underline;
+    text-decoration-color: #f06932;
+}
+
+mat-toolbar a:active{
+color:#373c3c;
+}
+
+mat-toolbar button{
+    background-color: #f06932;
+    color: #ffffff;
+} */
+
+a:link {
+    color: #9b9c9d;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #9b9c9d;
+    text-decoration: none;
+
+}
+
+a:hover {
+    /* text-decoration: underline;
+    text-decoration-color: #f06932; */
+    border-bottom: 2px solid #f26925;
+}
+
+a:active{
+color:#373c3c;
+}
+
+button{
+    background-color: #f06932;
+    color: #ffffff;
+}
+
+ .nav-style {
+  background: #fff;
+  opacity: 0.9;
+}
+
