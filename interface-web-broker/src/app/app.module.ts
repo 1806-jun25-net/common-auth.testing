@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
 import { RoutingModule } from './modules/routing/routing.module';
 import { ForecastModule } from '@revaturecloud/forecast/';
 import { AuthService } from './services/auth.service';
+import { AuthGuard } from './auth.guard';
 
 
 
@@ -42,7 +43,7 @@ import { AuthService } from './services/auth.service';
     ForecastModule,
     SelectionModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

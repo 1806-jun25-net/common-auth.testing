@@ -5,11 +5,12 @@ import { MainImageComponent } from '../../components/main-image/main-image.compo
 
 import { ForecastComponent } from '@revaturecloud/forecast';
 import { SelectionComponent } from '@revaturecloud/selection';
+import { AuthGuard } from '../../auth.guard';
 
 const appRoutes: Routes = [
   { path: '', component: MainImageComponent },
-  { path: 'forecast', component: ForecastComponent },
-  { path: 'selection', component: SelectionComponent }
+  { path: 'forecast', component: ForecastComponent, canActivate: [AuthGuard] },
+  { path: 'selection', component: SelectionComponent, canActivate: [AuthGuard] }
 ]
 @NgModule({
   imports: [

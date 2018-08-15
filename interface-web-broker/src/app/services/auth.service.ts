@@ -18,6 +18,15 @@ export class AuthService {
             // callback for login redirect
         });
     }
+    get isLoggedIn() {
+        const check = this.app.getUser();
+        if (check) {
+            return true;
+        }
+        else {
+            return false;
+        }
+      }
     public login() {
         return this.app.loginPopup(this.applicationConfig.graphScopes,  this.applicationConfig.extraQueryParameter)
             .then(idToken => {
