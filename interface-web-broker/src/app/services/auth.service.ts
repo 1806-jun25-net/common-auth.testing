@@ -8,7 +8,7 @@ export class AuthService {
     private applicationConfig: any = {
         clientID: 'c5cbec24-2287-4c8f-9789-d31faa5f5d77',
         graphScopes: ['user.read'],
-        authority: 'https://login.microsoftonline.com/project3auth.onmicrosoft.com'
+        authority: 'https://login.microsoftonline.com/project3auth.onmicrosoft.com',
         extraQueryParameter: 'domain_hint=project3auth.onmicrosoft.com'
     };
     private app: any;
