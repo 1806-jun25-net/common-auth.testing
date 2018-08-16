@@ -24,12 +24,16 @@ mat-toolbar button{
 } */
 
 a:link {
-    color: #9b9c9d;
+    color: #474c55;
     text-decoration: none;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
 }
 
 a:visited {
-    color: #9b9c9d;
+    color: #474c55;
     text-decoration: none;
 
 }
@@ -40,17 +44,25 @@ a:hover {
     border-bottom: 2px solid #f26925;
 }
 
+a:focus {
+    border-bottom: 2px solid #f26925;
+}
+
 a:active{
-color:#373c3c;
+    color:#373c3c;
 }
 
 button{
     background-color: #f06932;
     color: #ffffff;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
 }
 
  .nav-style {
   background: #fff;
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
